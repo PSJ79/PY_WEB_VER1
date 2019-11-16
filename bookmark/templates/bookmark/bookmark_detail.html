@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="title">{{ object.title }}</h1>
+<ul>
+    <li>URL : <a href="{{object.url}}">{{ object.url }}</a> </li>
+    <li>Create Date: {{ object.create_date }} </li>
+    <li>Modify Date: {{ object.modify_date }}</li>
+</ul>
+<iframe src="{{ object.url }}"></iframe>
+
+
+<div id="content">
+
+    <h1>{{ object.title }}</h1>
+    <div>
+        <p>Description: {{ object.description }}</p>
+        <p>Create Date: {{ object.create_date }}</p>
+        <p>Modify Date: {{object.modify_date }}</p>
+        <img src="{{ object.image.url }}" width="600" height="600">
+     </div>
+
+</div>
+
+
+</body>
+</html>

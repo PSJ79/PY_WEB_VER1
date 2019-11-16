@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dm402site.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <style>
+        .des {
+            text-align:center;
+            font-family: 'McLaren', cursive;
+            }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <h1 class="des">{{object.title}}</h1>
+        <div>
+            <p class="des">Description: {{ object.description }} </p>
+            <p class="des">Create Date: {{ object.create_date }} </p>
+            <p class="des">Modify Date: {{ object.modify_date }} </p>
+            <img src="{{ object.image.url }}" width="600" height="600">
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+</body>
+</html>
