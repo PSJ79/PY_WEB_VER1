@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <meta charset="UTF-8">
+    <title>HAHAHA</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            text-align:center;
+        }
+        .ha a{
+            font-family: 'Pacifico', cursive;
+            color:green;
+            font-size:60px;
+            margin-left:30px;
+            margin-right:30px;
+            text-decoration:none;
+        }
+
+    </style>
+
+<p>Sign Out</p>
+<div><img src="https://cdn.gamemeca.com/gmdata/0001/553/574/246577_%EB%A6%AC%EA%B7%B8%EC%98%A4%EB%B8%8C%EB%A0%88%EC%A0%84%EB%93%9C_%EA%B3%B5%EC%8B%9D01.jpg"></div>
+<span class="ha"><a href="{% url 'index' %}">Go to Index</a></span>
+<span class="ha"><a href="{% url 'login' %}">Sign In Again</a></span>
+{% endblock content %}

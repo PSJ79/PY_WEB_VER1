@@ -45,6 +45,22 @@
             #username{
                 color: greenyellow;
             }
+
+            #auth2{
+                left:50%;
+                top:10%;
+            }
+            #auth1{
+                left:50%;
+                top:10%;
+            }
+            .greet{
+                font-size:25px;
+            }
+            .userID{
+                color:greenyellow;
+                font-size:35px;
+
         </style>
     </head>
     <body>
@@ -52,13 +68,31 @@
     <iframe width="100%" height="1060" src="https://www.youtube.com/embed/KGlv9Lw4QSM?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h1 class="main_text" id="title">DJANGO FRAMEWORK</h1>
     <h1 class="main_text" id="made">Made By
-        <span id="username">Ryan</span> &amp;
-        <span id="dlab">DLAB</span>
+        <span id="username">PSJ</span> &amp;
+        <span id="dlab">SeventyNine</span>
     </h1>
     <ul class="main_text" id="menu">
         <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
         <li><a href="{% url 'bookmark_index' %}">BOOKMARK</a></li>
         <li><a href="{% url 'blog_index' %}">BLOG</a></li>
     </ul>
+
+
+
+
+
+    {% if user.is_active %}
+    <ul class="main_text" id="auth1">
+        <p class="greet">Hello, <strong class="userID">{{ user.get_username }}</strong></p>
+        <li><a class="auth_menu" href="{% url 'logout' %}">Log Out</a></li>
+        <li><a class="auth_menu" href="{% url 'password_change' %}">PassWord Change</a></li>
+    </ul>
+    {% else %}
+    <ul class="main_text" id="auth2">
+        <p class="greet">Hello, <strong class="userID">Anonymous</strong></p>
+        <li><a class="auth_menu" href="{% url 'login' %}">Sign In</a></li>
+        <li><a class="auth_menu" href="{% url 'register' %}">Sign Up</a></li>
+    </ul>
+    {% endif %}
     </body>
 </html>

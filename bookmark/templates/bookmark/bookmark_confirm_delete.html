@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAHAHA</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            text-align:center;
+            font-family: 'Pacifico', cursive;
+            font-size:20px;
+        }
+        img {
+            margin-top:50px;
+            margin-left:50px;
+            margin-right:50px;
+            width:300px;
+            height:250px;
+        }
+        button {
+            margin-top:50px;
+            margin-bottom:50px;
+            width:300px;
+            height:50px;
+            color:white;
+            background-color:magenta;
+            border-radius:30px;
+            border:1px solid magenta;
+        }
+        button:hover{
+            margin-top:50px;
+            margin-bottom:50px;
+            width:300px;
+            height:50px;
+            color:white;
+            background-color:purple;
+            border-radius:30px;
+            border:1px solid purple;
+        }
+        #ha {
+            border:5px solid gray;
+            border-radius:30px;
+            display:inline-block
+        }
+
+    </style>
+</head>
+<body>
+    <div id="ha">
+    <form method="post" action=".">{% csrf_token %}
+        <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR3FJMWj1FDYHq_i4pdN9feiIkPMYiNK1_IQhPCZM9edfyFbPNn">
+        </div>
+        <button type="submit">Confirm</button>
+    </form>
+    </div>
+</body>
+</html>

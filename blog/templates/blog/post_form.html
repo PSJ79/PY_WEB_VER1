@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAHAHA</title>
+</head>
+<body>
+    <form method="post" action="." enctype="multipart/form-data"> {% csrf_token %}
+
+    <div>
+        {{  form.title.label_tag }} {{ form.title }}
+    </div>
+
+    <div>
+        {{ form.image.label_tag }} {{ form.image }}
+    </div>
+
+    <div>
+        {{ form.description.label_tag }} {{ form.description }}
+    </div>
+
+    <button type="submit">Create / Update</button>
+</form>
+</body>
+</html>

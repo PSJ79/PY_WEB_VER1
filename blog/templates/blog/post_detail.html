@@ -21,7 +21,8 @@
 </head>
 <body>
     <div id="content">
-
+        <a href="{% url 'post_update' post.id %}"><button>Update</button></a>
+        <a href="{% url 'post_delete' post.id %}"><button>Delete</button></a>
         <h1 class="des">{{object.title}}</h1>
         <div>
             <p class="des">Description: {{ object.description }} </p>

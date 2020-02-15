@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <style>
+
+        body{
+            font-family: 'Pacifico', cursive;
+        }
+        h1{
+            color:magenta;
+            font-size: 30px;
+            margin-top:50px;
+            margin-bottom:30px;
+            text-align:center
+        }
+        img{
+            width:200px;
+            height:150px;
+        }
+        #dv{
+            text-align:center;
+        }
+        #di {
+            text-align:center;
+
+        }
+
+        #di a {
+            font-size:30px;
+            color:yellowgreen;
+            margin-top:30px;
+            text-decoration:none;
+            }
+
+    </style>
+
+
+    <h1>Successfully Signed Up</h1>
+    <div id="dv"><img src="https://s3-ap-northeast-1.amazonaws.com/crowdticket0/newtest/posters/484/title_img_file_1-1.jpg"></div>
+    <div id="di"><a href="{% url 'index' %}">go index.</a></div>
+
+{% endblock content %}

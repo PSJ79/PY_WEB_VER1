@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<form method="post" action=".">{% csrf_token %}
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="col-lg-6">T I T L E <div class="glyphicon glyphicon-pencil"></div></div>
+        <div class="col-lg-6">
+        {{ form.title }}
+    </div>
+        <div class="col-md-4"></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+        <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="col-lg-6">U R L <div class="glyphicon glyphicon-globe"></div></div>
+        <div class="col-lg-6">
+        {{ form.url }}
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+        </div>
+            <br>
+            <br>
+    <div class="btnc">
+    <button class="mbtn" type="submit">Sign In</button>
+    <input type="hidden" value="{{ next }}">
+    </div>
+    </div>
+</form>
+{% endblock content %}

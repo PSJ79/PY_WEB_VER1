@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <title>Post List</title>
     {% load staticfiles %}
-
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <style>
+        .de {
+            font-family: 'Solway', serif;
+            color: orange;
+            font-size : 30px;
+        }
+    </style>
 </head>
 <body>
 
 <div id="content">
     {% for post in object_list %}
-        <p> {{ post.title }} </p>
+        <p class="de"> {{ post.title }} </p>
         <img src ="{{ post.image.url }}">
-        <p> {{ post.description }} </p>
+        <p class="de"> {{ post.description }} </p>
     {% endfor %}
 
+</div>
+<div id="create_button">
+    <a href="{% url 'blog_create' %}">
+        <button>Create</button>
+    </a>
 </div>
 </body>
 </html>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <title>HAHAHA</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+
+        button{
+            font-family: 'Pacifico', cursive;
+            width:100px;
+            height:70px;
+            color:red;
+            font-size:20px;
+        }
+        div{
+            color:green;
+            font-size:30px;
+            font-family: 'Pacifico', cursive;
+        }
+        #name{
+            color:blue;
+            text-align:center;
+            font-size:55px;
+            font-family: 'Pacifico', cursive;
+        }
+        img{
+            width:500px;
+            height:500px;
+        }
+        #dv{
+            text-align:center;
+        }
+        #k{
+            text-align:center;
+            display:block;
+        }
+
+    </style>
+<form id="name" method="post" action=".">{% csrf_token %}
+
+    <div>
+        {{  form.username.label_tag }} {{ form.username }}
+    </div>
+
+    <div>
+        {{ form.password.label_tag }} {{ form.password }}
+    </div>
+
+    <button type="submit">Sign In</button>
+    <input type="hidden" value="{{ next }}">
+    <br>
+    <br>
+    <br>
+    <a class="auth_menu" id="k" href="{% url 'register' %}">SIGN UP</a>
+    <div id="dv"><img src="http://simpleicon.com/wp-content/uploads/lock-9.png"></div>
+</form>
+{% endblock content %}
